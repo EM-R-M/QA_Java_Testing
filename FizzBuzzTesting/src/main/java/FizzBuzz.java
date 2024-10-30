@@ -3,11 +3,15 @@ import java.util.Scanner;
 public class FizzBuzz {
 
     public String FizzBuzzMethod(int maxValue){
-        String finalString = "";
-        for (int x = 1; x <= maxValue; x++) {
-            finalString = finalString.concat(FizzBuzzPrintout(x) + ", ");
+        if (maxValue > 0) {
+            String finalString = "";
+            for (int x = 1; x <= maxValue; x++) {
+                finalString = finalString.concat(FizzBuzzPrintout(x) + ", ");
+            }
+            return finalString.substring(0, finalString.length()-2);
+        } else {
+            return "INVALID VALUE. Max value must be greater than 0";
         }
-        return finalString.substring(0, finalString.length()-2);
     }
 
     // Function to print the correct data depending on

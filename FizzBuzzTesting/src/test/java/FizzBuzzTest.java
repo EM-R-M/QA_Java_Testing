@@ -12,4 +12,12 @@ public class FizzBuzzTest {
         assertEquals(givenResult, wantedResult);
     }
 
+    @Test
+    public void negativeNumberTest() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String givenResult = fizzBuzz.FizzBuzzMethod(-5);
+        String wantedResult = "INVALID VALUE. Max value must be greater than 0";
+        assertEquals(givenResult, wantedResult);
+    }
+
 }
